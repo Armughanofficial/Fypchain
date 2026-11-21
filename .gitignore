@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Secrets & Environment Variables
+.env
+**/.env
+.env.local
+**/.env.local
+
+# Hardhat & Vite Build Outputs
+contracts/artifacts/
+contracts/cache/
+frontend/dist/
+
+# OS & Editor Files
+.DS_Store
+.vscode/
