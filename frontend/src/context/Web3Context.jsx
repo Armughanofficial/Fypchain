@@ -5,7 +5,15 @@ import { supabase } from '../lib/supabase';
 
 const Web3Context = createContext(null);
 
-const EXPECTED_CHAIN_ID = '0x7a69'; // 31337 (Hardhat Localhost) — we will swap to 0xaa36a7 (Sepolia) later
+const EXPECTED_CHAIN_ID = '0xaa36a7';
+
+const NETWORK_PARAMS = {
+  chainId: '0xaa36a7',
+  chainName: 'Sepolia test network',
+  nativeCurrency: { name: 'SepoliaETH', symbol: 'ETH', decimals: 18 },
+  rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'],
+  blockExplorerUrls: ['https://sepolia.etherscan.io'],
+};
 
 export function Web3Provider({ children }) {
   const [account, setAccount] = useState('');
